@@ -1,0 +1,6 @@
+{
+  "src\\@Name\\@Name.html": "<h1>@Name</h1>\n<div>{{message}}</div>",
+  "src\\@Name\\@Name.controller.js": "(function () {\n 'use strict';\n angular.module('app.@Name').controller('@NameController', HomeController);\n function HomeController($scope) {\n $scope.message = '@Name page $scope.message';\n }\n})();\n",
+  "src\\@Name\\@Name.service.js": "(function () {\n 'use strict';\n angular.module('app.@Name').factory('@NameService', HomeService);\n function HomeService($http) {\n return {getMessage: getMessage};\n function getMessage() {\n return 'Service response';\n }\n }\n})();\n",
+  "src\\@Name\\@Name.module.js": "(function () {\n 'use strict';\n angular.module('app.@Name', []);\n angular.module('app.@Name').config(function ($stateProvider) {\n $stateProvider.state('@Name', {\n url: '/@Name',\n templateUrl: '@Name/@Name.html',\n controller: '@NameController',\n controllerAs: '@NameCtrl'\n });\n });\n})();\n"
+}
